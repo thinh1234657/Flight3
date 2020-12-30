@@ -1,0 +1,56 @@
+﻿@model Flight.Models.PHIEUDATCHO
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PHIEUDATCHO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KHACHHANG.TenKhachHang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KHACHHANG.TenKhachHang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayDat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayDat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoGheDat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoGheDat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaChuyenBay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaChuyenBay)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

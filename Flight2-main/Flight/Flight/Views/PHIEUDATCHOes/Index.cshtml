@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Flight.Models.PHIEUDATCHO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.KHACHHANG.TenKhachHang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayDat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoGheDat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaChuyenBay)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.KHACHHANG.TenKhachHang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayDat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoGheDat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaChuyenBay)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaPhieuDatCho }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaPhieuDatCho }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaPhieuDatCho })
+        </td>
+    </tr>
+}
+
+</table>

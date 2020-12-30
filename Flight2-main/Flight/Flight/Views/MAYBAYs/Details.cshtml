@@ -1,0 +1,26 @@
+﻿@model Flight.Models.MAYBAY
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MAYBAY</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LoaiMayBay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoaiMayBay)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaMayBay }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

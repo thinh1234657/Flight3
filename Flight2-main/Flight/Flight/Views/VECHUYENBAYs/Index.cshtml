@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Flight.Models.VECHUYENBAY>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CHUYENBAY.MaChiTietChuyenBay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DONGIA.MaDonGia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HANGVE.TenHangVe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KHACHHANG.TenKhachHang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TinhTrangVe)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CHUYENBAY.MaChiTietChuyenBay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DONGIA.MaDonGia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HANGVE.TenHangVe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KHACHHANG.TenKhachHang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TinhTrangVe)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaVeChuyenBay }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaVeChuyenBay }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaVeChuyenBay })
+        </td>
+    </tr>
+}
+
+</table>

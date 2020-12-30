@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Flight.Models.TUYENBAY>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaTuyenBay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaSanBayDi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaSanBayDen)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.MaTuyenBay)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MaSanBayDi)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MaSanBayDen)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.MaTuyenBay }) |
+        @Html.ActionLink("Details", "Details", new { id = item.MaTuyenBay }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.MaTuyenBay })
+    </td>
+</tr>
+}
+
+</table>

@@ -1,0 +1,50 @@
+﻿@model Flight.Models.PHIEUDATCHO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PHIEUDATCHO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KHACHHANG.TenKhachHang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KHACHHANG.TenKhachHang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayDat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayDat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoGheDat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoGheDat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaChuyenBay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaChuyenBay)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaPhieuDatCho }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

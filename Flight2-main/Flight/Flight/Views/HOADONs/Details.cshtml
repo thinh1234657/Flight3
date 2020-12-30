@@ -1,0 +1,58 @@
+﻿@model Flight.Models.HOADON
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HOADON</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DOANHTHUTHANG.MaDoanhThuNam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOANHTHUTHANG.MaDoanhThuNam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KHACHHANG.TenKhachHang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KHACHHANG.TenKhachHang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NHANVIEN.TenNhanVien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NHANVIEN.TenNhanVien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayHoaDon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayHoaDon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThanhTien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThanhTien)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaHoaDon }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

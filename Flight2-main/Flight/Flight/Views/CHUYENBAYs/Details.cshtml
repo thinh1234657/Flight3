@@ -1,0 +1,82 @@
+﻿@model Flight.Models.CHUYENBAY
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CHUYENBAY</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CHITIETCHUYENBAY.MaChuyenBay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHITIETCHUYENBAY.MaChuyenBay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MAYBAY.LoaiMayBay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MAYBAY.LoaiMayBay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TUYENBAY.MaSanBayDi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TUYENBAY.MaSanBayDi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayGio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayGio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThoiGianBay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThoiGianBay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuongGheHang1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuongGheHang1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuongGheHang2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuongGheHang2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaChiTietChuyenBay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaChiTietChuyenBay)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaChuyenBay }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

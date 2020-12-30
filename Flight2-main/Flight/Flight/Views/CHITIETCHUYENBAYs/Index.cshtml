@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Flight.Models.CHITIETCHUYENBAY>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CHUYENBAY.MaChiTietChuyenBay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaChuyenBay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SanBayTrungGian)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThoiGianDung)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GhiChu)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CHUYENBAY.MaChiTietChuyenBay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaChuyenBay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SanBayTrungGian)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThoiGianDung)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GhiChu)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaChiTietChuyenBay }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaChiTietChuyenBay }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaChiTietChuyenBay })
+        </td>
+    </tr>
+}
+
+</table>

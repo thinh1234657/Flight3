@@ -1,0 +1,58 @@
+﻿@model Flight.Models.VECHUYENBAY
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>VECHUYENBAY</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CHUYENBAY.MaChiTietChuyenBay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHUYENBAY.MaChiTietChuyenBay)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DONGIA.MaDonGia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DONGIA.MaDonGia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HANGVE.TenHangVe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HANGVE.TenHangVe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KHACHHANG.TenKhachHang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KHACHHANG.TenKhachHang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TinhTrangVe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TinhTrangVe)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaVeChuyenBay }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

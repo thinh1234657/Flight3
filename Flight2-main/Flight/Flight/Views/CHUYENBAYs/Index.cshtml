@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Flight.Models.CHUYENBAY>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CHITIETCHUYENBAY.MaChuyenBay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MAYBAY.LoaiMayBay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TUYENBAY.MaSanBayDi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayGio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThoiGianBay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuongGheHang1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuongGheHang2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaChiTietChuyenBay)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CHITIETCHUYENBAY.MaChuyenBay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAYBAY.LoaiMayBay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TUYENBAY.MaSanBayDi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayGio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThoiGianBay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuongGheHang1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuongGheHang2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaChiTietChuyenBay)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaChuyenBay }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaChuyenBay }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaChuyenBay })
+        </td>
+    </tr>
+}
+
+</table>
